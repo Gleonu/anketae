@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #2f2f2f; /* асфальтний сірий фон */
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            background: #3d3d3d;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #e0e0e0;
+            color: black;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Залиште свої дані і ми з вами зв'яжемось</h2>
+    <form action="mailto:maasterspell@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" name="Ім'я" required>
+
+        <label for="in_person">Розглядаєте для себе очний формат?</label>
+        <select id="in_person" name="Очний формат">
+            <option value="Так">Так</option>
+            <option value="Ні">Ні</option>
+        </select>
+
+        <label for="phone">Номер телефону:</label>
+        <input type="tel" id="phone" name="Телефон" required>
+
+        <label for="telegram">Telegram юзернейм:</label>
+        <input type="text" id="telegram" name="Telegram" placeholder="@example">
+
+        <label for="city">Місто де ви проживаєте:</label>
+        <input type="text" id="city" name="Місто">
+
+        <label for="age">Вік:</label>
+        <input type="number" id="age" name="Вік">
+
+        <label for="gender">Стать:</label>
+        <select id="gender" name="Стать">
+            <option value="Чоловіча">Чоловіча</option>
+            <option value="Жіноча">Жіноча</option>
+            <option value="Інше">Інше</option>
+        </select>
+
+        <label for="message">Додаткове повідомлення:</label>
+        <textarea id="message" name="Повідомлення" rows="4"></textarea>
+
+        <button type="submit">Відправити</button>
+    </form>
+</div>
+</body>
+</html>
